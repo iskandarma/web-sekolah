@@ -1,3 +1,8 @@
+@php
+    $schoolName = $siteSetting?->school_name ?? config('school.name');
+    $slogan = $siteSetting?->slogan ?: config('school.hero.headline');
+@endphp
+
 <section aria-labelledby="hero-title" class="relative overflow-hidden">
     <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
         <div class="absolute inset-0 bg-[radial-gradient(120%_80%_at_80%_-10%,var(--brand-soft),transparent_60%)]"></div>
@@ -9,12 +14,12 @@
             <div data-reveal>
                 <span class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2 text-xs font-bold text-brand-dark shadow-soft md:text-sm">
                     <x-ui.icon name="sparkles" size="size-4" class="text-primary"/>
-                    {{ config('school.short_name') }} — Terakreditasi A
+                    {{ $schoolName }} — Terakreditasi A
                 </span>
             </div>
             <div data-reveal style="--reveal-delay:80ms">
                 <h1 id="hero-title" class="mt-5 text-4xl leading-[1.1] md:text-5xl lg:text-6xl">
-                    Tempat Bertumbuh, <span class="text-gradient-brand">Berprestasi,</span> dan Menginspirasi
+                    {{ $slogan }}
                 </h1>
             </div>
             <div data-reveal style="--reveal-delay:160ms">
