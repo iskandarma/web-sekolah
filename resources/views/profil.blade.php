@@ -1,5 +1,7 @@
-<x-layouts.public title="Profil Sekolah — SMA Cendekia Nusantara" description="Visi, misi, nilai, dan sejarah singkat SMA Cendekia Nusantara beserta sambutan kepala sekolah.">
-    <x-layout.page-header eyebrow="Profil" title="Mengenal {{ config('school.name') }}" description="{{ config('school.description') }}" :breadcrumb="[['label'=>'Profil']]" />
+@php($schoolName = $siteSetting?->school_name ?? config('school.name'))
+
+<x-layouts.public title="Profil Sekolah — {{ $schoolName }}" description="Visi, misi, nilai, dan sejarah singkat SMA Cendekia Nusantara beserta sambutan kepala sekolah.">
+    <x-layout.page-header eyebrow="Profil" title="Mengenal {{ $schoolName }}" description="{{ config('school.description') }}" :breadcrumb="[['label'=>'Profil']]" />
     <section aria-labelledby="pilar-title" class="container-page py-14 md:py-20">
         <h2 id="pilar-title" class="text-3xl md:text-4xl">Visi, Misi, dan Nilai</h2>
         @php($pillars=[

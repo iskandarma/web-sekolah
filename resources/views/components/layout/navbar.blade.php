@@ -1,3 +1,5 @@
+@php($schoolName = $siteSetting?->school_name ?? config('school.name'))
+
 <header id="site-header" class="sticky top-0 z-50 w-full bg-transparent transition-all duration-300">
     <div class="container-page grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3 lg:py-4">
         <a href="/" class="flex min-w-0 items-center gap-3">
@@ -5,7 +7,7 @@
                 <x-ui.icon name="graduation" size="size-6" />
             </span>
             <span class="min-w-0">
-                <span class="block truncate text-sm font-extrabold text-brand-dark sm:text-base">{{ config('school.name') }}</span>
+                <span class="block truncate text-sm font-extrabold text-brand-dark sm:text-base">{{ $schoolName }}</span>
                 <span class="block truncate text-[0.7rem] text-muted-foreground sm:text-xs">Unggul • Berkarakter • Inovatif</span>
             </span>
         </a>

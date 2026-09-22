@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="id">
+@php($schoolName = $siteSetting?->school_name ?? config('school.name'))
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ $description ?? config('school.description') }}">
-    <title>{{ $title ?? config('school.name') }}</title>
-    <meta property="og:title" content="{{ $title ?? config('school.name') }}">
+    <title>{{ $title ?? $schoolName }}</title>
+    <meta property="og:title" content="{{ $title ?? $schoolName }}">
     <meta property="og:description" content="{{ $description ?? config('school.description') }}">
     <meta property="og:type" content="website">
     @stack('head')

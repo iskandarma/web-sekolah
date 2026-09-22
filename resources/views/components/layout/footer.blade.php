@@ -1,3 +1,5 @@
+@php($schoolName = $siteSetting?->school_name ?? config('school.name'))
+
 <footer class="bg-navy text-white/80">
     <div class="container-page grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4 lg:py-16">
         <div>
@@ -5,7 +7,7 @@
                 <span class="grid size-11 place-items-center rounded-xl bg-gradient-brand text-white">
                     <x-ui.icon name="graduation" size="size-6" />
                 </span>
-                <span class="text-base font-extrabold text-white">{{ config('school.name') }}</span>
+                <span class="text-base font-extrabold text-white">{{ $schoolName }}</span>
             </div>
             <h2 class="mt-6 text-sm font-bold tracking-widest text-white uppercase">Tentang Sekolah</h2>
             <p class="mt-3 text-sm leading-relaxed">{{ config('school.description') }}</p>
@@ -38,7 +40,7 @@
     </div>
     <div class="border-t border-white/10">
         <div class="container-page flex flex-col gap-2 py-5 text-xs sm:flex-row sm:items-center sm:justify-between">
-            <p>© {{ date('Y') }} {{ config('school.name') }}. Seluruh hak cipta dilindungi.</p>
+            <p>© {{ date('Y') }} {{ $schoolName }}. Seluruh hak cipta dilindungi.</p>
             <p>Dikelola oleh Tim Humas Sekolah</p>
         </div>
     </div>

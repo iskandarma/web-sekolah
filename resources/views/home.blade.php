@@ -1,4 +1,6 @@
-<x-layouts.public title="SMA Cendekia Nusantara — Sekolah Unggul & Berkarakter" description="Profil resmi SMA Cendekia Nusantara: program akademik, prestasi siswa, berita, agenda kegiatan, galeri sekolah, dan informasi PPDB.">
+@php($schoolName = $siteSetting?->school_name ?? config('school.name'))
+
+<x-layouts.public title="{{ $schoolName }} — Sekolah Unggul & Berkarakter" description="Profil resmi {{ $schoolName }}: program akademik, prestasi siswa, berita, agenda kegiatan, galeri sekolah, dan informasi PPDB.">
     <x-home.hero-section />
     <x-home.principal-message />
     <x-home.statistics />
