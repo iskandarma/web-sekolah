@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => 'SMA Cendekia Nusantara',
+    'name' => 'SMA 123',
     'short_name' => 'Cendekia Nusantara',
     'tagline' => 'Tempat Bertumbuh, Berprestasi, dan Menginspirasi',
     'description' => 'Sekolah menengah atas yang membangun generasi unggul melalui pendidikan berkualitas, berkarakter, kreatif, dan adaptif terhadap perkembangan teknologi.',
